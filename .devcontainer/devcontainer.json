@@ -1,0 +1,35 @@
+{
+  "name": "chess-trainer",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {}
+  },
+
+  "shutdownAction": "none",
+
+  // if launching container remote over ssh uncomment workspaceMount and update source/target paths as needed
+  // "workspaceMount": "source=/home/someremoteuser/projectdir,target=/workspaces/projectname,type=bind,consistency=cached",
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "pflannery.vscode-versionlens",
+    "mhutchie.git-graph",
+    "tombonnike.vscode-status-bar-format-toggle"
+  ],
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [3000],
+
+  // Specifies a command that should be run after the container has been created.
+  "postCreateCommand": "yarn",
+
+  // Comment out the next line to run as root instead.
+  "remoteUser": "node"
+}

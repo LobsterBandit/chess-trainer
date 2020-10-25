@@ -5,6 +5,11 @@
     "args": {}
   },
 
+  "shutdownAction": "none",
+
+  // if launching container remote over ssh uncomment workspaceMount and update source/target paths as needed
+  // "workspaceMount": "source=/home/someremoteuser/projectdir,target=/workspaces/projectname,type=bind,consistency=cached",
+
   // Set *default* container specific settings.json values on container create.
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
